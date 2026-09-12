@@ -1,93 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MotoGo - Bike Rental</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - PedalGo</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- NAVBAR -->
-     <header class="navbar">
-        <div class=""logo>Moto<span>GO</span></div>
-        <ul class="nav-links" id="navLinks">
-            <li>
-                <a href="Home.html" class="active">Home</a>
-            </li>
-            <li>
-                <a href="bikes.html">Bikes</a>
-            </li>
-            <li>
-                <a href="booking.html">Booking</a>
-            </li>
-             <li>
-                <a href="about.html">About</a>
-            </li>
-             <li>
-                <a href="contact.html">Contact</a>
-            </li>
-        </ul>
 
-        <div class="goku" id="goku">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-     </header>
+  <header class="navbar">
+    <a href="index.html" class="logo">Pedal<span>Go</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="bikes.html">Bikes</a></li>
+      <li><a href="booking.html">Booking</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
 
-     <!-- MAIN SECTION -->
-      <section class="hero">
-        <div class="hero-text">
-            <h1>Rent a bike. Rent the City.</h1>
-            <p>Affordable and easy bike rentals for your daily commute, weekend trips or just for fun. Choose from mountain, sports and electric bikes.</p>
-            <a href="Home.html" class="btn primary">Browse Bikes</a>
-        </div>
-      </section>
+  <main>
+    <section class="page-heading">
+      <p class="small-title">ABOUT US</p>
+      <h1>About PedalGo</h1>
+      <p>A simple bike-rental website made as a college project.</p>
+    </section>
 
-    <!-- WHY CHOOSE US -->
-     <section class="features">
-        <h2>Why Choose MotoGo?</h2>
-        <div class="feature-cards">
-            <div class="card">
-                <h3>Easy Booking</h3>
-                <p>Book a bike in jst 3 simple steps. No long forms, no waiting.</p>
-            </div>
+    <section class="about-content">
+      <div class="about-box">
+        <h2>Who We Are</h2>
+        <p>
+          PedalGo is a small college project based on the idea of making bike rentals
+          simple and easy. Users can view bikes, filter them by type and submit a booking form.
+        </p>
+      </div>
 
-            <div class="card">
-                <h3>Affordable Rates</h3>
-                <p>Starting at just ₹40/hour with no hidden charges.</p>
-            </div>
+      <div class="about-box">
+        <h2>Our Aim</h2>
+        <p>
+          Our aim is to create a clean and beginner-friendly website using HTML, CSS and
+          basic JavaScript. We focused on simple navigation, forms and responsive design.
+        </p>
+      </div>
+    </section>
 
-            <div class="card">
-                <h3>Well Maintained</h3>
-                <p>All bikes are checked and serviced regularly before every ride.</p>
-            </div>
-        </div>
-     </section>
+    <section class="team-section">
+      <p class="small-title">OUR TEAM</p>
+      <h2>Team PedalGo</h2>
+      <div class="team-cards">
+        <div class="team-card"><span>01</span><h3>Member 1</h3><p>Home Page</p></div>
+        <div class="team-card"><span>02</span><h3>Member 2</h3><p>Bikes Page</p></div>
+        <div class="team-card"><span>03</span><h3>Member 3</h3><p>Booking & JavaScript</p></div>
+        <div class="team-card"><span>04</span><h3>Member 4</h3><p>About, Contact & GitHub</p></div>
+      </div>
+    </section>
+  </main>
 
-     <!-- HOW IT WORKS -->
-      <section class="steps">
-        <h2>How It Works</h2>
-        <div class="steps-container">
-            <div class="step">
-                <div class="step-number">1</div>
-                    <p>Select your bike</p>
-            </div>
-            <div class="step">
-                <div class="step-number">2</div>
-                <p>Choose pickup & return date</p>
-            </div>
-            <div class="step">
-                <div class="step-number">3</div>
-                <p>Comfirm and ride</p>
-            </div>
-        </div>
-      </section>
+  <footer>
+    <p>&copy; 2026 MotoGo Bike Rentals</p>
+    <p>Made by Team MotoGo | Chitkara University</p>
+  </footer>
 
-      <!-- FOOTER -->
-       <footer>
-        <p>&copy; 2026 PedalGo Bike Rentals. All rights reserved.</p>
-        <p>Made by Team PedalGo | Chitkara University</p>
-       </footer>
+  <script src="js/script.js"></script>
 </body>
 </html>
