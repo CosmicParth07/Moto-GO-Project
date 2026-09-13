@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Bikes - PedalGo</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="index.html" class="logo">Pedal<span>Go</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="bikes.html" class="active">Bikes</a></li>
+      <li><a href="booking.html">Booking</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+    <section class="page-heading">
+      <p class="small-title">OUR COLLECTION</p>
+      <h1>Choose Your Bike</h1>
+      <p>Pick a bike according to your ride and budget.</p>
+    </section>
+
+    <section class="filter-bar">
+      <button class="filter-btn active" data-type="all">All</button>
+      <button class="filter-btn" data-type="mountain">Mountain</button>
+      <button class="filter-btn" data-type="sports">Sports</button>
+      <button class="filter-btn" data-type="electric">Electric</button>
+    </section>
+
+    <section class="bike-grid" id="bikeGrid">
+      <div class="bike-card" data-type="mountain">
+        <div class="bike-image"><img src="images/mountain-bike.png" alt="Mountain Bike"></div>
+        <p class="bike-type">Mountain Bike</p>
+        <h3>Trailblazer X1</h3>
+        <p class="bike-price">₹50 <span>/ hour</span></p>
+        <a href="booking.html" class="btn-secondary">Book Now</a>
+      </div>
+
+      <div class="bike-card" data-type="sports">
+        <div class="bike-image"><img src="images/sports-bike.png" alt="Sports Bike"></div>
+        <p class="bike-type">Sports Bike</p>
+        <h3>Speedster Pro</h3>
+        <p class="bike-price">₹70 <span>/ hour</span></p>
+        <a href="booking.html" class="btn-secondary">Book Now</a>
+      </div>
+
+      <div class="bike-card" data-type="electric">
+        <div class="bike-image"><img src="images/electric-bike.png" alt="Electric Bike"></div>
+        <p class="bike-type">Electric Bike</p>
+        <h3>VoltRide E2</h3>
+        <p class="bike-price">₹90 <span>/ hour</span></p>
+        <a href="booking.html" class="btn-secondary">Book Now</a>
+      </div>
+
+      <div class="bike-card" data-type="mountain">
+        <div class="bike-image"><img src="images/mountain-bike2.png" alt="Mountain Bike"></div>
+        <p class="bike-type">Mountain Bike</p>
+        <h3>Rock Hopper</h3>
+        <p class="bike-price">₹45 <span>/ hour</span></p>
+        <a href="booking.html" class="btn-secondary">Book Now</a>
+      </div>
+
+      <div class="bike-card" data-type="sports">
+        <div class="bike-image"><img src="images/sports-bike2.png" alt="Sports Bike"></div>
+        <p class="bike-type">Sports Bike</p>
+        <h3>Racer 500</h3>
+        <p class="bike-price">₹65 <span>/ hour</span></p>
+        <a href="booking.html" class="btn-secondary">Book Now</a>
+      </div>
+
+      <div class="bike-card" data-type="electric">
+        <div class="bike-image"><img src="images/electric-bike2.png" alt="Electric Bike"></div>
+        <p class="bike-type">Electric Bike</p>
+        <h3>VoltRide E1</h3>
+        <p class="bike-price">₹80 <span>/ hour</span></p>
+        <a href="booking.html" class="btn-secondary">Book Now</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 PedalGo Bike Rentals</p>
+    <p>Made by Team PedalGo | Chitkara University</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
