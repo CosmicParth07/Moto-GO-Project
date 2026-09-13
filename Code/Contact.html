@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - MotoGO</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="index.html" class="logo">Moto<span>GO</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="bikes.html">Bikes</a></li>
+      <li><a href="booking.html">Booking</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+    <section class="page-heading">
+      <p class="small-title">GET IN TOUCH</p>
+      <h1>Contact Us</h1>
+      <p>Have a question? Send us a message.</p>
+    </section>
+
+    <section class="contact-section">
+      <div class="contact-info">
+        <p class="small-title">REACH US</p>
+        <h2>We'd love to hear from you.</h2>
+        <p><strong>Address:</strong><br>Chitkara University, Rajpura, Punjab</p>
+        <p><strong>Phone:</strong><br>+91 8950522433</p>
+        <p><strong>Email:</strong><br>support@motogo.com</p>
+      </div>
+
+      <form id="contactForm" class="main-form contact-form">
+        <label for="cname">Name</label>
+        <input type="text" id="cname" placeholder="Your name">
+        <span class="error" id="cnameError"></span>
+
+        <label for="cemail">Email</label>
+        <input type="email" id="cemail" placeholder="Your email">
+        <span class="error" id="cemailError"></span>
+
+        <label for="message">Message</label>
+        <textarea id="message" rows="5" placeholder="Write your message"></textarea>
+        <span class="error" id="messageError"></span>
+
+        <button type="submit" class="btn-primary form-button">Send Message</button>
+        <p id="contactSuccessMsg" class="success-msg"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 MotoGO Bike Rentals</p>
+    <p>Made by Team MotoGO | Chitkara University</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
