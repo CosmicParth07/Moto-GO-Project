@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - MotoGO</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="Home.html" class="logo">Moto<span>GO</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="bikes.html">Bikes</a></li>
+      <li><a href="booking.html">Booking</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+    <section class="page-heading">
+      <p class="small-title">WELCOME</p>
+      <h1>Login / Sign Up</h1>
+      <p>Login to book your bike and see your bookings.</p>
+    </section>
+
+    <section class="form-section">
+      <div class="main-form">
+
+        <div class="auth-tabs">
+          <button type="button" class="auth-tab active" data-tab="loginPanel">Login</button>
+          <button type="button" class="auth-tab" data-tab="signupPanel">Sign Up</button>
+        </div>
+
+        <!-- Login -->
+        <form id="loginForm" class="auth-panel active" novalidate>
+          <label for="loginEmail">Email</label>
+          <input type="email" id="loginEmail" placeholder="Enter your email">
+          <span class="error" id="loginEmailError"></span>
+
+          <label for="loginPassword">Password</label>
+          <input type="password" id="loginPassword" placeholder="Enter your password">
+          <span class="error" id="loginPasswordError"></span>
+
+          <button type="submit" class="btn-primary form-button">Login</button>
+          <p id="loginMsg" class="success-msg"></p>
+        </form>
+
+        <!-- Sign Up -->
+        <form id="signupForm" class="auth-panel" novalidate>
+          <label for="signupName">Full Name</label>
+          <input type="text" id="signupName" placeholder="Enter your name">
+          <span class="error" id="signupNameError"></span>
+
+          <label for="signupEmail">Email</label>
+          <input type="email" id="signupEmail" placeholder="Enter your email">
+          <span class="error" id="signupEmailError"></span>
+
+          <label for="signupPassword">Password</label>
+          <input type="password" id="signupPassword" placeholder="At least 6 characters">
+          <span class="error" id="signupPasswordError"></span>
+
+          <label for="signupConfirm">Confirm Password</label>
+          <input type="password" id="signupConfirm" placeholder="Re-enter password">
+          <span class="error" id="signupConfirmError"></span>
+
+          <button type="submit" class="btn-primary form-button">Create Account</button>
+          <p id="signupMsg" class="success-msg"></p>
+        </form>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 MotoGO Bike Rentals</p>
+    <p>Made by Team MotoGO | Chitkara University</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

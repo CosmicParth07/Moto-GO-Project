@@ -7,11 +7,11 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Loading Screen -->
-    <div class="loader">
-        <div class="loader-bike">🚲</div>
-        <p>Loading MotoGO...</p>
-    </div>
+  <!-- Loading Screen -->
+  <div class="loader">
+    <div class="loader-bike">🚲</div>
+    <p>Loading MotoGO...</p>
+  </div>
 
   <header class="navbar">
     <a href="Home.html" class="logo">Moto<span>GO</span></a>
@@ -31,83 +31,139 @@
     </button>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="hero-text">
-        <p class="small-title">SIMPLE • AFFORDABLE • EASY</p>
-        <h1>Rent a Bike.<br>Ride the City.</h1> 
-        <p class="hero-description">
-          Need a bike for college, a short trip or a weekend ride?
-          Choose a bike, select your dates and start your ride.
-        </p>
-        <a href="bikes.html" class="btn-primary">Browse Bikes</a>
-      </div>
-
-      <div class="hero-img">
-        <img src="Images/motogo.png" alt="Bike for rent">
-      </div>
-    </section>
-
-    <section class="features">
-      <div class="section-title">
-        <p class="small-title">WHY MOTOGO?</p>
-        <h2>Everything you need for an easy ride</h2>
-      </div>
-
-      <div class="feature-cards">
-        <div class="card">
-          <div class="card-icon">01</div>
-          <h3>Easy Booking</h3>
-          <p>Choose your bike and fill a simple booking form.</p>
-        </div>
-
-        <div class="card">
-          <div class="card-icon">02</div>
-          <h3>Student Friendly</h3>
-          <p>Simple plans and affordable hourly rental prices.</p>
-        </div>
-
-        <div class="card">
-          <div class="card-icon">03</div>
-          <h3>Good Bikes</h3>
-          <p>Our bikes are checked before they are given for a ride.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="steps">
-      <div class="section-title">
-        <p class="small-title">HOW IT WORKS</p>
-        <h2>Three simple steps</h2>
-      </div>
-
-      <div class="steps-container">
-        <div class="step">
-          <div class="step-number">1</div>
-          <h3>Select a bike</h3>
-          <p>Choose Mountain, Sports or Electric.</p>
-        </div>
-
-        <div class="step">
-          <div class="step-number">2</div>
-          <h3>Pick your dates</h3>
-          <p>Select pickup and return dates.</p>
-        </div>
-
-        <div class="step">
-          <div class="step-number">3</div>
-          <h3>Confirm booking</h3>
-          <p>Submit the form and get your ride.</p>
-        </div>
-      </div>
-    </section>
-  </main>
+  <!-- React will put the home page content inside this div -->
+  <main id="root"></main>
 
   <footer>
     <p>&copy; 2026 MotoGO Bike Rentals</p>
     <p>Made by Team MotoGO | Chitkara University</p>
   </footer>
 
+  <!-- React, ReactDOM and Babel (loaded from CDN, no installation needed) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.2/babel.min.js"></script>
+
+  <script type="text/babel">
+    // useState is a React "hook" used to store data inside a component
+    const { useState } = React;
+
+    // ===== Data (arrays of objects) =====
+    const features = [
+      { id: "01", title: "Easy Booking", text: "Choose your bike and fill a simple booking form." },
+      { id: "02", title: "Student Friendly", text: "Simple plans and affordable hourly rental prices." },
+      { id: "03", title: "Good Bikes", text: "Our bikes are checked before they are given for a ride." }
+    ];
+
+    const steps = [
+      { number: 1, title: "Select a bike", text: "Choose Mountain, Sports or Electric." },
+      { number: 2, title: "Pick your dates", text: "Select pickup and return dates." },
+      { number: 3, title: "Confirm booking", text: "Submit the form and get your ride." }
+    ];
+
+    // ===== Component 1: Hero =====
+    function Hero() {
+      // read the logged in user from localStorage (saved by login page)
+      const [user] = useState(function () {
+        const data = localStorage.getItem("motogoCurrentUser");
+        return data ? JSON.parse(data) : null;
+      });
+
+      return (
+        <section className="hero">
+          <div className="hero-text">
+            <p className="small-title">SIMPLE • AFFORDABLE • EASY</p>
+            {user && <p className="small-title">WELCOME BACK, {user.name.toUpperCase()}!</p>}
+            <h1>Rent a Bike.<br />Ride the City.</h1>
+            <p className="hero-description">
+              Need a bike for college, a short trip or a weekend ride?
+              Choose a bike, select your dates and start your ride.
+            </p>
+            <a href="bikes.html" className="btn-primary">Browse Bikes</a>
+          </div>
+
+          <div className="hero-img">
+            <img src="Images/motogo.png" alt="Bike for rent" />
+          </div>
+        </section>
+      );
+    }
+
+    // ===== Component 2: one feature card (receives data using props) =====
+    function FeatureCard(props) {
+      return (
+        <div className="card">
+          <div className="card-icon">{props.id}</div>
+          <h3>{props.title}</h3>
+          <p>{props.text}</p>
+        </div>
+      );
+    }
+
+    // ===== Component 3: Features section =====
+    function Features() {
+      return (
+        <section className="features">
+          <div className="section-title">
+            <p className="small-title">WHY MOTOGO?</p>
+            <h2>Everything you need for an easy ride</h2>
+          </div>
+
+          <div className="feature-cards">
+            {features.map(function (item) {
+              return <FeatureCard key={item.id} id={item.id} title={item.title} text={item.text} />;
+            })}
+          </div>
+        </section>
+      );
+    }
+
+    // ===== Component 4: one step =====
+    function Step(props) {
+      return (
+        <div className="step">
+          <div className="step-number">{props.number}</div>
+          <h3>{props.title}</h3>
+          <p>{props.text}</p>
+        </div>
+      );
+    }
+
+    // ===== Component 5: Steps section =====
+    function Steps() {
+      return (
+        <section className="steps">
+          <div className="section-title">
+            <p className="small-title">HOW IT WORKS</p>
+            <h2>Three simple steps</h2>
+          </div>
+
+          <div className="steps-container">
+            {steps.map(function (item) {
+              return <Step key={item.number} number={item.number} title={item.title} text={item.text} />;
+            })}
+          </div>
+        </section>
+      );
+    }
+
+    // ===== Main App component =====
+    function App() {
+      return (
+        <div>
+          <Hero />
+          <Features />
+          <Steps />
+        </div>
+      );
+    }
+
+    // show the App inside <main id="root">
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(<App />);
+  </script>
+
+  <!-- Normal JavaScript (navbar, login/logout, menu) -->
   <script src="script.js"></script>
 </body>
 </html>

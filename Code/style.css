@@ -765,3 +765,83 @@ footer p {
         visibility: hidden;
     }
 }
+
+/* ===== Login / Sign Up (add at the END of style.css) ===== */
+.auth-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.auth-tab {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #174a3b;
+  background-color: white;
+  color: #174a3b;
+  border-radius: 7px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.auth-tab.active,
+.auth-tab:hover {
+  background-color: #174a3b;
+  color: white;
+}
+
+.auth-panel {
+  display: none;
+}
+
+.auth-panel.active {
+  display: block;
+}
+
+.nav-links a.logout-link {
+  color: #f2c94c;
+}
+
+/* ===== My Bookings ===== */
+.my-bookings {
+  max-width: 520px;
+  margin: 25px auto 0;
+}
+
+.my-bookings h2 {
+  color: #174a3b;
+  margin-bottom: 12px;
+  font-size: 20px;
+}
+
+.booking-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  background-color: white;
+  border: 1px solid #e0e8e3;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.booking-item small {
+  color: #718078;
+}
+
+.cancel-btn {
+  padding: 6px 12px;
+  border: 1px solid #c0392b;
+  background-color: white;
+  color: #c0392b;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.cancel-btn:hover {
+  background-color: #c0392b;
+  color: white;
+}
+
