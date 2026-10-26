@@ -29,7 +29,7 @@ function getCurrentUser() {
 
 function logoutUser() {
   localStorage.removeItem("motogoCurrentUser");
-  window.location.href = "Home.html";
+  window.location.href = "/";
 }
 
 function getBookings() {
@@ -75,7 +75,7 @@ function setupNavbar() {
     });
   } else {
     link.textContent = "Login";
-    link.href = "login.html";
+    link.href = "/Code/login.html";
     if (window.location.pathname.indexOf("login.html") !== -1) {
       link.className = "active";
     }
@@ -227,7 +227,7 @@ if (loginForm) {
     document.getElementById("loginMsg").textContent = "Welcome back, " + foundUser.name + "!";
 
     setTimeout(function () {
-      window.location.href = "Home.html";
+      window.location.href = "/";;
     }, 1000);
   });
 }
@@ -391,7 +391,7 @@ if (bookingForm) {
     var user = getCurrentUser();
     if (user === null) {
       alert("Please login first to book a bike.");
-      window.location.href = "login.html";
+      window.location.href = "/Code/login.html";
       return;
     }
 
